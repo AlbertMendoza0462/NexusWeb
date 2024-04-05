@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario - Nexus Planner</title>
+    <!-- Enlaces a los estilos de Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .espaciado-botones {
+            margin-right: 20px;
+            /* Ajusta el valor según el espacio deseado */
+        }
+
+        .accion-boton {
+            color: red;
+            border: none;
+            cursor: pointer;
+            background: none;
+        }
+
+        .accion-boton:hover {
+            text-decoration: underline;
+        }
+
+        .espaciado-botones {
+            margin-left: 40px; /* Ajusta el valor según el espacio deseado */
+        }
+        .espaciado-botones-guardar  {
+            margin-right: 70px; /* Ajusta el valor según el espacio deseado */
+        }
+    </style>
+</head>
+
+<body class="h-100">
+
+    <div class="container-fluid h-100">
+        <main class="row justify-content-center align-items-center">
+            <div class="col-md-6 col-lg-4">
+                <div class="card p-3">
+                    <h2>Crea un proyecto</h2>
+                    <h2>Datos del proyecto</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="fechaFinalizacion">Fecha de finalización:</label>
+                            <input type="date" id="fechaFinalizacion" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="descripcion">Descripción:</label>
+                            <input type="text" id="descripcion" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefono">Teléfono:</label>
+                            <input type="tel" id="telefono" class="form-control">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <main class="row justify-content-center align-items-center">
+            <div class="col-md-8 col-lg-6 my-4"> <!-- Agregado el div con la clase my-4 para el margen vertical -->
+                <div class="card p-3">
+                    <h2>Colaboradores</h2>
+
+                    <div class="form-group">
+                        <label for="correo">Buscar por nombre o correo:</label>
+                        <div class="input-group">
+                            <input type="text" id="correo" class="form-control">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary espaciado-botones-guardar" type="button">Buscar</button>
+                                <button class="btn btn-success" type="button">Enviar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Correo</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>
+                                    <span class="accion-boton">Editar</span>
+                                    <span class="accion-boton espaciado-botones">Borrar</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>
+                                    <span class="accion-boton">Editar</span>
+                                    <span class="accion-boton espaciado-botones">Borrar</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td colspan="2">Larry the Bird</td>
+                                <td>
+                                    <span class="accion-boton">Editar</span>
+                                    <span class="accion-boton espaciado-botones">Borrar</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts de Bootstrap JS (jQuery y Popper.js son requeridos) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
